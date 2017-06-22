@@ -11,6 +11,13 @@
 
     <script type="text/javascript">
       /**
+       *  On load, called to load the auth2 library and API client library.
+       */
+      function handleClientLoad() {
+        gapi.load('client:auth2', initClient);
+      }
+      
+      /**
        * Append a pre element to the body containing the given message
        * as its text node. Used to display the results of the API call.
        *
